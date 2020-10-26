@@ -7,7 +7,7 @@ import javax.persistence.*;
 
 
 @Entity
-@Table(name="Employee")
+@Table(name="student")
 @EntityListeners(AuditingEntityListener.class)
 public class Student {
 
@@ -21,6 +21,17 @@ public class Student {
     @NonNull
     private int roll_no;
 
+    @NonNull
+    private String Address;
+
+    @NonNull
+    private int Percentage;
+
+    @NonNull
+    private int Year;
+
+    @NonNull
+    private String Project_Name;
 
     public int getId() {
         return id;
@@ -41,4 +52,35 @@ public class Student {
         this.roll_no = roll_no;
     }
 
+    public String getAddress() {
+        return Address;
+    }
+
+    public void setAddress(String address) {
+        Address = address;
+    }
+
+    public int getPercentage() {
+        return Percentage;
+    }
+
+    public void setPercentage(int percentage) {
+        Percentage = percentage;
+    }
+
+    public int getYear() {
+        return Year;
+    }
+
+    public void setYear(int year) {
+        Year = year;
+    }
+
+    public String getProject_Name() {
+        return Project_Name;
+    }
+
+    public void setProject_Name(String project_Name) {
+        Project_Name = project_Name;
+    }
 }
